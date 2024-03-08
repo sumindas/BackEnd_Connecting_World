@@ -52,7 +52,7 @@ class UserProfile(models.Model):
     
 class Post(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
-    content = models.TextField()
+    content = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(default=timezone.now)
     is_deleted = models.BooleanField(default=False)
     
