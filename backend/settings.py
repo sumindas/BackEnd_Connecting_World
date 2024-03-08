@@ -189,6 +189,7 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_EXPOSE_HEADERS = ['Content-Type', 'X-CSRFToken']
 ROOT_URLCONF = 'backend.urls'
 CORS_ALLOW_ALL_ORIGINS = True
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 CORS_ALLOW_METHODS = [
@@ -224,7 +225,9 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:8000',
     'http://localhost:3000',
     'http://127.0.0.1:3000',
-    'http://127.0.0.1:3000'
+    'http://127.0.0.1:3000',
+    'https://front-end-connecting-world.vercel.app/',
+
 ]
 
 
