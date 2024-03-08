@@ -102,7 +102,7 @@ TEMPLATES = [
 
 AUTH_USER_MODEL = 'user.CustomUser'
 
-WSGI_APPLICATION = 'backend.wsgi.application'
+# WSGI_APPLICATION = 'backend.wsgi.application'
 ASGI_APPLICATION = 'backend.asgi.application'
 
 CHANNEL_LAYERS = {
