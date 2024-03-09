@@ -771,7 +771,7 @@ class RandomUserSuggestionsView(APIView):
     
     def get(self, request, *args, **kwargs):
         user_id = self.kwargs['user_id']
-        users = CustomUser.objects.filter(is_active=True, is_superuser=False).exclude(id=user_id).exclude(
+        users = CustomUser.objects.filter(is_active=True, is_verified=True, is_superuser=False).exclude(id=user_id).exclude(
             followers__follower__id=user_id
         ).order_by('?')[:6]
         
