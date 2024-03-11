@@ -43,7 +43,7 @@ class UserProfile(models.Model):
     date_of_birth = models.DateField(blank=True, null=True)
     location = models.CharField(max_length=100, blank=True, null=True)
     phone = PhoneNumberField(unique=False, blank=True)
-    profile_image = models.ImageField(upload_to='profile_images/', blank=True, null=True)
+    profile_image = models.ImageField(upload_to='profile_images/',default='profile_images/default.jpg', blank=True, null=True)
     cover_photo = models.ImageField(upload_to='cover_photos/', blank=True, null=True)
 
     
